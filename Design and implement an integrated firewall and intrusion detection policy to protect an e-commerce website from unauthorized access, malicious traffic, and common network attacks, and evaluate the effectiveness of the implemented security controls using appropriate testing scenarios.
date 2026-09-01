@@ -1,0 +1,115 @@
+# Integrated Firewall and Intrusion Detection System for E-Commerce Website
+
+## Project Overview
+This project focuses on designing and implementing an integrated Firewall and Intrusion Detection System (IDS) to protect an e-commerce website from unauthorized access, malicious traffic, and common network attacks. The security solution combines firewall rules and IDS monitoring to provide multiple layers of protection while maintaining the availability and performance of the web application.
+
+## Objective
+The primary objective of this project is to:
+- Protect the e-commerce website from unauthorized access.
+- Detect and prevent malicious network activities.
+- Block common cyber attacks.
+- Monitor network traffic in real time.
+- Evaluate the effectiveness of the implemented security controls.
+
+## Technologies Used
+- Firewall (Windows Firewall / pfSense / UFW / iptables)
+- Snort Intrusion Detection System
+- Kali Linux
+- Ubuntu Linux
+- Apache Web Server
+- Wireshark
+- VirtualBox / VMware
+
+## System Architecture
+Client → Firewall → Intrusion Detection System (Snort) → Web Server → Database
+
+## Features
+- Firewall rule configuration
+- Intrusion detection using Snort
+- Real-time network traffic monitoring
+- Attack detection and logging
+- Unauthorized access prevention
+- Web server protection
+- Security event analysis
+
+## Security Policies Implemented
+### Firewall Policies
+- Allow HTTP (Port 80)
+- Allow HTTPS (Port 443)
+- Allow SSH only for administrators
+- Block unused ports
+- Block suspicious IP addresses
+- Restrict unauthorized access
+
+### Intrusion Detection Policies
+- Detect port scanning attacks
+- Detect brute-force login attempts
+- Detect ICMP flood attacks
+- Detect SQL Injection patterns
+- Detect Cross-Site Scripting (XSS) attempts
+- Generate alerts for suspicious activities
+
+## Testing Scenarios
+The implemented security controls were evaluated using the following testing scenarios:
+
+### Test 1 – Unauthorized Login Attempt
+Expected Result:
+Firewall and IDS detect repeated login failures and generate alerts.
+
+### Test 2 – Port Scanning
+Tool:
+Nmap
+
+Expected Result:
+IDS detects scanning activity and logs the attack.
+
+### Test 3 – SQL Injection
+Tool:
+SQLMap
+
+Expected Result:
+IDS identifies SQL injection attempts and generates alerts.
+
+### Test 4 – ICMP Flood Attack
+Tool:
+Ping Flood
+
+Expected Result:
+Firewall limits excessive ICMP traffic and IDS records the event.
+
+### Test 5 – Normal User Access
+Expected Result:
+Legitimate users can access the website without interruption.
+
+## Results
+- Unauthorized access attempts were successfully detected.
+- Firewall blocked unwanted traffic.
+- Snort generated alerts for suspicious activities.
+- Common network attacks were identified.
+- Normal website functionality remained unaffected.
+
+## Advantages
+- Improved website security
+- Real-time attack detection
+- Layered network protection
+- Reduced risk of cyber attacks
+- Continuous traffic monitoring
+
+## Limitations
+- Signature-based IDS may not detect unknown attacks.
+- Firewall rules require regular updates.
+- High network traffic may increase alert volume.
+
+## Future Enhancements
+- Implement Intrusion Prevention System (IPS)
+- AI-based anomaly detection
+- Automatic IP blocking
+- Security Information and Event Management (SIEM) integration
+- Cloud-based monitoring
+
+## Conclusion
+The integrated Firewall and Intrusion Detection System provides an effective security solution for protecting an e-commerce website against unauthorized access and common network attacks. The testing scenarios demonstrate that the implemented controls successfully detect and mitigate malicious activities while maintaining normal website operations.
+
+## Author
+**Arjun Prabhu**  
+Register Number: **192522090**
